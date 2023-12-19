@@ -1,0 +1,91 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <style>
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+    }
+
+    #start-container {
+        text-align: center;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        background: url('./img/startScreenBackground.png') center/cover no-repeat;
+    }
+
+    #startButton {
+        background: url('./img/button.png') center/contain no-repeat; /* Replace 'start-button.png' with your button image file */
+        width: 200px; /* Set the width of your button */
+        height: 50px; /* Set the height of your button */
+        border: none;
+        cursor: pointer;
+        color: white;
+    }
+
+    #game-container {
+            display: none;
+        }
+
+    #score-container {
+            text-align: center;
+            color: white;
+            font-family: sans-serif;
+            font-size: 18px;
+    }
+
+    #game-over-container {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+    }
+
+    #restartButton {
+            background: url('./img/button.png') center/contain no-repeat; /* Replace 'restart-button.png' with your button image file */
+            width: 200px; /* Set the width of your button */
+            height: 50px; /* Set the height of your button */
+            border: none;
+            cursor: pointer;
+            color: white;
+        }
+
+    #final-score {
+            color: white;
+            font-family: sans-serif;
+            font-size: 24px;
+        }
+ </style>
+</head>
+<body>
+    <div id="start-container">
+    
+    <button id="startButton" onclick="startGame()">Start Game</button>
+
+    </div>
+
+    <div id="game-container">
+        <div style="position: relative" id="parentDiv">
+            <p id="score-container" >
+                <span>Score:</span> <span id="scoreEl"></span>
+            </p>
+            <canvas></canvas>
+        </div>
+    </div>
+
+    <div id="game-over-container" style="display: none;">
+        <p id="final-score" style="text-align: center; color: white; font-family: sans-serif; font-size: 24px;"></p>
+        <button id="restartButton" onclick="restartGame()">Restart Game</button>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+
+<script src="./index.js"></script>
+
+
